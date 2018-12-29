@@ -1,0 +1,3 @@
+function knopka() {
+  alert("Super")
+}
