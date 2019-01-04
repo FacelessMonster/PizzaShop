@@ -1,2 +1,26 @@
-<h1 style="color: #999;">Лучшая в мире пицца</h2>
-<button class="btn btn-primary" onclick="knopka()">Жми сюда сучка!</button>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<div>
+  <h1 style="color: #999;">Лучшая в мире пицца</h2>
+  <button class="btn btn-primary" onclick="knopka()">Жми сюда сучка!</button></hr></br>
+</div>
+
+<% @products.each do |row|%>
+  <div class="col">
+    <div class="col-md-4">
+    <img src="<%=row.path_to_image%>" alt="wth" class="img-rounded" style="width: 300px"></hr>
+    <%=row.description%></br>
+    Size: <%=row.size%> cm.</br>
+    Price: <%=row.price%> ₽</div>
+  </div>
+<%end%>
+
+</body>
+</html>
