@@ -8,8 +8,7 @@
 <body>
 
 <div>
-  <h1 style="color: #999;">Лучшая в мире пицца</h2>
-  <button class="btn btn-primary" onclick="knopka()">Жми сюда сучка!</button></hr></br>
+  <h1 style="color: #999;">Best pizza in the world</h2>
 </div>
 
 <% @products.each do |row|%>
@@ -18,7 +17,9 @@
     <img src="<%=row.path_to_image%>" alt="wth" class="img-rounded" style="width: 300px"></hr>
     <%=row.description%></br>
     Size: <%=row.size%> cm.</br>
-    Price: <%=row.price%> ₽</div>
+    Price: <%=row.price%> ₽
+    <button type="button" class="btn btn-warning" onclick="knopka()">Add to 🛒</button></hr></br>
+    </div>
   </div>
 <%end%>
 
