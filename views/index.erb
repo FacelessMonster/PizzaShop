@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
 </head>
 
 <body>
@@ -14,11 +12,12 @@
 <% @products.each do |row|%>
   <div class="col">
     <div class="col-md-4">
-    <img src="<%=row.path_to_image%>" alt="wth" class="img-rounded" style="width: 300px"></hr>
-    <%=row.description%></br>
-    Size: <%=row.size%> cm.</br>
-    Price: <%=row.price%> ₽
-    <button type="button" class="btn btn-warning" onclick="knopka()">Add to 🛒</button></hr></br>
+    <h3><b><%=row.title%></b></h3>
+    <img src="<%=row.path_to_image%>" alt="wth" class="img-rounded" style="width: 330px"></hr>
+    <div><%=row.description%></div>
+    <div>Size: <%=row.size%> cm.</div>
+    <div>Price: <%=row.price%> ₽
+    <button type="button" class="btn btn-sm btn-warning" onclick="javascript:add_to_cart(<%=row.id%>)">Add to cart 🛒</button></div></hr>
     </div>
   </div>
 <%end%>
