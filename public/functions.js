@@ -6,6 +6,7 @@ function add_to_cart(id)
   var x = window.localStorage.getItem('product_' + id);
   x = x * 1 + 1;
   window.localStorage.setItem(key, x);
+  alert("Thank you!")
 }
 
 function show_cart()
