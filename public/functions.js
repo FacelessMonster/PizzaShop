@@ -2,17 +2,28 @@
 
 function add_to_cart(id)
 {
-  var key = 'product_' + id;
-  var x = window.localStorage.getItem('product_' + id);
+  var key = "";
+  if (id == 1) {
+    key = "Hawaiian";
+  } if (id == 2) {
+    key = "Margarita";
+  } if (id == 3) {
+    key = "Pepperoni";
+  }
+  var x = window.localStorage.getItem(key);
   x = x * 1 + 1;
   window.localStorage.setItem(key, x);
-  alert("Thank you!")
+  alert("Thank you!");
+  
 }
 
 function show_cart()
-  { var str = "";
+  { var keys = [];
+    var vals = [];
     for (var i = 0; i < localStorage.length; i++)
-    {str+="product_" + localStorage.key(i) + "; quantities: " + localStorage.getItem(localStorage.key(i));
+    {
+      keys.push(localStorage.key(i));
+      vals.push(localStorage.getItem(localStorage.key(i)));
     }
-  alert(str)  
+  alert(vals);
   }
