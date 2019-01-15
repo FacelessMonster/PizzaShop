@@ -20,10 +20,12 @@ function add_to_cart(id)
 function show_cart()
   { var keys = [];
     var vals = [];
+    var order = [];
     for (var i = 0; i < localStorage.length; i++)
     {
       keys.push(localStorage.key(i));
       vals.push(localStorage.getItem(localStorage.key(i)));
+      order.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
     }
-  alert(vals);
+  alert(order);
   }
