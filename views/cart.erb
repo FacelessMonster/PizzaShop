@@ -1,3 +1,9 @@
-<h3>I want to show the products from cart on this page.</h3>
+<h3>My Cart.</h3>
+<body onLoad="show_cart()">
+<table id="demo" class="table">
 
-<button type="button" class="btn btn-sm btn-warning" onclick="javascript:show_cart()">Show cart 🛒</button></div><hr/>
+</table>
+<form action="/cart" method="post">
+<button type="submit" class="btn btn-sm btn-success">Send order</button></div><hr/>
+</form>
+</body>

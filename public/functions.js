@@ -18,14 +18,10 @@ function add_to_cart(id)
 }
 
 function show_cart()
-  { var keys = [];
-    var vals = [];
-    var order = [];
+  { var str = "";
     for (var i = 0; i < localStorage.length; i++)
     {
-      keys.push(localStorage.key(i));
-      vals.push(localStorage.getItem(localStorage.key(i)));
-      order.push([localStorage.key(i), localStorage.getItem(localStorage.key(i))]);
+      str += "<tr><td>" + localStorage.key(i) + "</td><td>" + localStorage.getItem(localStorage.key(i)) + "<td></tr><br>";
     }
-  alert(order);
+  document.getElementById("demo").innerHTML = str;
   }
