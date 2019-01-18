@@ -21,5 +21,7 @@ get '/cart' do
 end
 
 post '/cart' do
+	@clientsname = params[:clientsname]
+	@clintsphone = params[:clientsphone]
 	erb "Thank you"
 end

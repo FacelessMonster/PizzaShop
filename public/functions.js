@@ -19,9 +19,24 @@ function add_to_cart(id)
 
 function show_cart()
   { var str = "";
+    var totalprice = 0;
     for (var i = 0; i < localStorage.length; i++)
     {
+        if (localStorage.key(i) == "Hawaiian") {
+        var firstprice = localStorage.getItem(localStorage.key(i)) * 400;
+        totalprice += firstprice;
+      } if (localStorage.key(i) == "Margarita") {
+        var secondprice = localStorage.getItem(localStorage.key(i)) * 350;
+        totalprice += secondprice;
+      } if (localStorage.key(i) == "Pepperoni") {
+        var thirdprice = localStorage.getItem(localStorage.key(i)) * 350;
+        totalprice += thirdprice;
+      }
+      if (localStorage.key(i) != "Price") {
+      window.localStorage.setItem("Price", totalprice);
       str += "<tr><td>" + localStorage.key(i) + "</td><td>" + localStorage.getItem(localStorage.key(i)) + "<td></tr><br>";
     }
+  }
   document.getElementById("demo").innerHTML = str;
+  document.getElementById("price").innerHTML = totalprice + " ₽";
   }

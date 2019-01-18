@@ -1,9 +1,19 @@
 <h3>My Cart.</h3>
 <body onLoad="show_cart()">
-<table id="demo" class="table">
 
+<form action="/cart" method="post" class="form-inline">
+<table id="demo" class="table">
 </table>
-<form action="/cart" method="post">
+<div id="price" style="font-size: 22px;"></div><hr/>
+ <div class="form-group">
+    <label for="inputname">Your name:</label>
+    <input type="text" class="form-control" id="inputname" name="clientsname" placeholder="Patrick Jane">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">      Phone number:</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" name="clientsphone" placeholder="1234567890">
+  
 <button type="submit" class="btn btn-sm btn-success">Send order</button></div><hr/>
+
 </form>
 </body>
