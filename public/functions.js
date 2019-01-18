@@ -39,4 +39,7 @@ function show_cart()
   }
   document.getElementById("demo").innerHTML = str;
   document.getElementById("price").innerHTML = totalprice + " ₽";
+  document.getElementById("test").innerHTML = str;
+  $('#test2').val(totalprice);
+  $('#test').val(str);
   }
