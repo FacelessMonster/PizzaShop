@@ -32,8 +32,8 @@ function show_cart()
         var thirdprice = localStorage.getItem(localStorage.key(i)) * 350;
         totalprice += thirdprice;
       }
-      if (localStorage.key(i) != "Price") {
       window.localStorage.setItem("Price", totalprice);
+      if (localStorage.key(i) != "Price") {
       str += "<tr><td>" + localStorage.key(i) + "</td><td>" + localStorage.getItem(localStorage.key(i)) + "<td></tr><br>";
     }
   }
@@ -42,10 +42,14 @@ function show_cart()
   document.getElementById("test").innerHTML = str;
   $('#test2').val(totalprice);
   $('#test').val(str);
+  
   }
 
   function clearBasket() {
     window.localStorage.clear();
     alert("Your cart is empty");
     return false;
+  }
+  function clearBasket2() {
+    window.localStorage.clear();
   }
