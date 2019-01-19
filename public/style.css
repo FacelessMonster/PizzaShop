@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(29,	46,	55)	;
+  font-family: Verdana;
+  color: #999;
+}
+
+.navbar {
+  background-color: rgb(22,	35,	43);
+}
+
+.button5 {
+  background-color: rgb(254, 234, 88);
+  color: rgb(29,	46,	55);
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.button5:hover {
+  background-color: rgb(29,	46,	55);
+  color: rgb(255, 239, 116);
+}
+
+.navbar-brand {
+    color: #999;
+  }
+
