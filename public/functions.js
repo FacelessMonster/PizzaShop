@@ -50,6 +50,7 @@ function show_cart()
   function clearBasket() {
     window.localStorage.clear();
     alert("Your cart is empty");
+    window.location.reload();
     return false;
   }
   function clearBasket2() {
