@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Created at</th>
+      <th>Client</th>
+      <th>Client's phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@admin.reverse_each do |row|%>
+    <tr>
+      <td><%=row.order%></td>
+      <td><%=row.created_at%></td>
+      <td><%=row.name%></td>
+      <td><%=row.phone%></td>
+    </tr>
+    <%end%><hr/>
+  </tbody>
+
+</table>

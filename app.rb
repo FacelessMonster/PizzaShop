@@ -27,3 +27,8 @@ post '/cart' do
 	@orders = Order.create params[:orders]
 	erb :blabla
 end
+
+get '/admin' do
+	@admin = Order.all
+	erb :admin
+end
