@@ -20,6 +20,7 @@ function add_to_cart(id)
 
 function show_cart()
   { var str = "";
+    var str2 = "";
     var totalprice = 0;
     for (var i = 0; i < localStorage.length; i++)
     {
@@ -36,13 +37,13 @@ function show_cart()
       window.localStorage.setItem("Price", totalprice);
       if (localStorage.key(i) != "Price") {
       str += "<tr><td>" + localStorage.key(i) + "</td><td>" + localStorage.getItem(localStorage.key(i)) + "<td></tr><br>";
+      str2 += localStorage.key(i) + ": " + localStorage.getItem(localStorage.key(i)) + "; ";
     }
   }
   document.getElementById("demo").innerHTML = str;
   document.getElementById("price").innerHTML = totalprice + " ₽";
-  document.getElementById("test").innerHTML = str;
-  $('#test2').val(totalprice);
-  $('#test').val(str);
+  $('#ordersprice').val(totalprice + " ₽");
+  $('#ordersorder').val(str2);
   
   }
 

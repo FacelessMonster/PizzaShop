@@ -19,13 +19,13 @@
 <div id="price" style="font-size: 22px;"></div><hr/>
  <div class="form-group">
     <label for="inputname">Your name:</label>
-    <input type="text" class="form-control" id="inputname" name="clientsname" placeholder="Patrick Jane">
-    <input type="text" class="hidden" id="test" name="testorder">
-    <input type="text" class="hidden" id="test2" name="testorder2">
+    <input type="text" class="form-control" id="inputname" name="orders[name]" placeholder="Patrick Jane">
+    <input type="text" class="hidden" id="ordersorder" name="orders[order]">
+    <input type="text" class="hidden" id="ordersprice" name="orders[price]">
   </div>
   <div class="form-group">
     <label for="inputphone">Phone number:</label>
-    <input type="text" class="form-control" id="inputphone" name="clientsphone" placeholder="1234567890">
+    <input type="text" class="form-control" id="inputphone" name="orders[phone]" placeholder="1234567890">
   
 <button type="submit" class="btn btn-sm btn-success">Send order</button>
 <button type="submit" class="btn btn-sm btn-danger" onClick="clearBasket(); return false;">Clear the cart</button></div><hr/>
