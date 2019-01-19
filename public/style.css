@@ -1,26 +1,24 @@
 body {
-  background-color: rgb(29,	46,	55)	;
-  font-family: Verdana;
-  color: #999;
+  font-family: Courier;
 }
 
 .navbar {
-  background-color: rgb(22,	35,	43);
+  background-color: rgb(199, 92, 80);
 }
 
 .button5 {
-  background-color: rgb(254, 234, 88);
+  background-color: rgb(255, 255, 255);
   color: rgb(29,	46,	55);
-  border: 1px solid #000000;
+  border: 2px solid #00aa00;
   border-radius: 5px;
 }
 
 .button5:hover {
-  background-color: rgb(29,	46,	55);
-  color: rgb(255, 239, 116);
+  background-color: #5ab65a;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 68, 9);
+  border-radius: 5px;
 }
 
-.navbar-brand {
-    color: #999;
-  }
+
 
