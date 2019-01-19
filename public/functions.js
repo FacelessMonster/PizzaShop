@@ -43,3 +43,9 @@ function show_cart()
   $('#test2').val(totalprice);
   $('#test').val(str);
   }
+
+  function clearBasket() {
+    window.localStorage.clear();
+    alert("Your cart is empty");
+    return false;
+  }
