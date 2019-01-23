@@ -35,7 +35,14 @@ post '/cart' do
 	end
 end
 
-get '/admin' do
-	@admin = Order.all
-	erb :admin
+post '/manager' do
+	erb :manager
+	@login = params[:login]
+	@pass = params[:password]
+	if @login == "sebastian" && @pass == "pid0rin"
+		@admin = Order.all
+		erb :admin
+	else
+		erb :manager
+	end
 end
