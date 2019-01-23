@@ -9,6 +9,8 @@ class Product < ActiveRecord::Base
 end
 
 class Order < ActiveRecord::Base
+	validates :name, presence: true, length: {minimum:1}
+	validates :phone, presence: true
 end
 
 before do
@@ -24,8 +26,13 @@ get '/cart' do
 end
 
 post '/cart' do
-	@orders = Order.create params[:orders]
-	erb :blabla
+	@orders = Order.new params[:orders]
+	if @orders.save
+		erb :blabla
+	else
+		@error = @orders.errors.full_messages.first
+		erb :cart
+	end
 end
 
 get '/admin' do
