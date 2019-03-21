@@ -35,6 +35,10 @@ post '/cart' do
 	end
 end
 
+get '/manager' do
+	erb :manager
+end
+
 post '/manager' do
 	erb :manager
 	@login = params[:login]
